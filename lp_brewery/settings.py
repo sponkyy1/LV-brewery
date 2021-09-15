@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = str(Path(__file__).resolve().parent.parent)
 
 
 # Quick-start development settings - unsuitable for production
@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-pa)2)l3yd=bz^o6u#b0a0&5861zsptdc=u_qpks8$(s9_60059
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.32.32']
+ALLOWED_HOSTS = ['34.139.10.86', '10.0.0.2']
 
 
 # Application definition
@@ -64,12 +64,8 @@ WSGI_APPLICATION = 'lp_brewery.wsgi.application'
 
 DATABASES = {
     'default': {
-       'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'djangodatabase',
-        'USER': 'django',
-        'PASSWORD': 'qwerty',
-        'HOST': '192.168.32.32',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
